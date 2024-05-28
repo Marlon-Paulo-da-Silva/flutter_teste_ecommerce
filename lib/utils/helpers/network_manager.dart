@@ -32,12 +32,12 @@ class NetworkManager extends GetxController {
   /// Returns `true` if connected, `false` otherwise.
   Future<bool> isConnected() async {
     try {
-      final result = await _connectivity.checkConnectivity();
-      if (result == ConnectivityResult.none) {
-        return false;
-      } else {
+      // final result = await _connectivity.checkConnectivity();
+      // if (result == ConnectivityResult.none) {
+      //   return false;
+      // } else {
         return true;
-      }
+      // }
     } on PlatformException catch (_) {
       return false;
     }
